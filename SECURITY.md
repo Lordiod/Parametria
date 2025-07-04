@@ -21,7 +21,7 @@ Please **do not** report security vulnerabilities through public GitHub issues, 
 
 Instead, please report security vulnerabilities by:
 
-- **Email**: Send details to [security@imageprocessor.dev] (replace with actual email)
+- **Email**: Send details to [yyyabed123@gmail.com]
 - **GitHub Security**: Use GitHub's private vulnerability reporting feature
 - **Direct Message**: Contact the maintainers directly
 
@@ -91,7 +91,7 @@ We monitor our dependencies for security vulnerabilities:
 
 For security-related questions or concerns:
 
-- **Security Team**: [security@imageprocessor.dev] (replace with actual email)
+- **Security Team**: [yyyabed123@gmail.com]
 - **Maintainers**: See [CONTRIBUTING.md](CONTRIBUTING.md) for contact information
 
 Thank you for helping keep the Image Editor secure! 🔒
