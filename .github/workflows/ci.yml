@@ -1,0 +1,100 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # Stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
+
+    - name: Test imports
+      run: |
+        python -c "import main; print('All imports successful')"
+
+    - name: Test configuration
+      run: |
+        python -c "import config; print('Config loaded successfully')"
+
+    - name: Test modules individually
+      run: |
+        python -c "from models.image_model import ImageModel; print('ImageModel OK')"
+        python -c "from services.image_processor import ImageProcessor; print('ImageProcessor OK')"
+        python -c "from utils.screen_utils import ScreenUtils; print('ScreenUtils OK')"
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install safety bandit
+
+    - name: Security check with bandit
+      run: |
+        bandit -r . -x ./.venv,./test
+
+    - name: Check dependencies for vulnerabilities
+      run: |
+        safety check
+
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install black isort mypy
+
+    - name: Check code formatting with black
+      run: |
+        black --check --diff .
+
+    - name: Check import sorting with isort
+      run: |
+        isort --check-only --diff .
+
+    - name: Type checking with mypy
+      run: |
+        mypy . --ignore-missing-imports
