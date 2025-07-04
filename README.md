@@ -1,4 +1,4 @@
-# 🎨 Image Editor
+# 🎨 Parametria
 
 <div align="center">
 
