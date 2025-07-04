@@ -46,7 +46,7 @@ A modern, modular image editing application built with Python, CustomTkinter, an
 ## Project Structure
 
 ```
-Image-processing-project/
+Parametria/
 ├── main.py                     # Application entry point
 ├── requirements.txt            # Python dependencies
 ├── models/
@@ -75,7 +75,7 @@ Image-processing-project/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/Image-processing-project.git
+git clone https://github.com/Lordiod/Parametria.git
 cd Image-processing-project
 ```
 
@@ -124,7 +124,7 @@ python main.py
 The application follows a **modular architecture** with clear separation of concerns:
 
 ```
-📁 Image-processing-project/
+📁 Parametria/
 ├── 🚀 main.py                    # Application entry point
 ├── ⚙️ config.py                  # Configuration settings
 ├── 📋 requirements.txt           # Python dependencies
@@ -174,8 +174,8 @@ We welcome contributions! Here's how you can help:
 ### Development Setup
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/Image-processing-project.git
-cd Image-processing-project
+git clone https://github.com/Lordiod/Parametria.git
+cd Parametria
 
 # Install development dependencies
 pip install -r requirements.txt
@@ -225,16 +225,14 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/Image-processing-project/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/Image-processing-project/discussions)
-- **Wiki**: [Project Wiki](https://github.com/yourusername/Image-processing-project/wiki)
+- **Issues**: [GitHub Issues](https://github.com/Lordiod/Parametria/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Lordiod/Parametria/discussions)
+- **Wiki**: [Project Wiki](https://github.com/Lordiod/Parametria/wiki)
 
 ---
 
 <div align="center">
 
 **⭐ Star this repo if you find it helpful!**
-
-Made with ❤️ by the Image Editor team
 
 </div>
