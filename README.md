@@ -13,7 +13,7 @@ A modern, modular image editing application built with Python, CustomTkinter, an
 
 </div>
 
-## ✨ Features
+## Features
 
 ### 🖼️ **Image Operations**
 - **Multi-format Support**: JPG, PNG, GIF, BMP, TIFF
@@ -65,7 +65,7 @@ Parametria/
 └── finalimage.py              # Original monolithic version (legacy)
 ```
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - **Python 3.7+** (Check with `python --version`)
@@ -99,7 +99,7 @@ python main.py
 - `Pillow>=9.0.0` - Image processing library  
 - `screeninfo>=0.8.1` - Screen resolution detection
 
-## 🎯 Usage
+## Usage
 
 ### Basic Workflow
 1. **Open Image**: Click "Open Image" to load a file
@@ -119,7 +119,7 @@ python main.py
 - **Multiple Formats**: Save as JPG, PNG, BMP
 - **Auto-scaling**: Large images automatically fit display
 
-## 🏗️ Architecture
+## Architecture
 
 The application follows a **modular architecture** with clear separation of concerns:
 
@@ -160,7 +160,7 @@ The application follows a **modular architecture** with clear separation of conc
 #### **Utils** (`utils/`)
 - `ScreenUtils`: Screen resolution and window sizing utilities
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how you can help:
 
