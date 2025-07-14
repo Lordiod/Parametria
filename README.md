@@ -76,7 +76,7 @@ Parametria/
 1. **Clone the repository**
 ```bash
 git clone https://github.com/Lordiod/Parametria.git
-cd Image-processing-project
+cd Parametria
 ```
 
 2. **Run setup script** (Recommended)
@@ -164,13 +164,6 @@ The application follows a **modular architecture** with clear separation of conc
 
 We welcome contributions! Here's how you can help:
 
-### Getting Started
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
 ### Development Setup
 ```bash
 # Clone your fork
@@ -222,12 +215,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)** - Modern UI framework
 - **[Pillow](https://python-pillow.org/)** - Python Imaging Library
 - **[Screeninfo](https://github.com/rr-/screeninfo)** - Multi-monitor support
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/Lordiod/Parametria/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Lordiod/Parametria/discussions)
-- **Wiki**: [Project Wiki](https://github.com/Lordiod/Parametria/wiki)
 
 ---
 
